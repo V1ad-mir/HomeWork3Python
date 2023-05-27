@@ -16,20 +16,19 @@ my_list = []
 quantity = int(input('Введите колличество элементов в списке: '))
 number = int(input('Введите число для поиска близких по величине элементов к числу: '))
 for _ in range(quantity):
-    my_list.append(random.randint(0,10))
+    my_list.append(random.randint(0, 10))
 print(my_list)
 my_list.append(number)
 my_list = sorted(my_list)
 position = my_list.index(number)
-if position==len(my_list)-1:
-    print(f'самый близкий по величине элемент к заданному числу {number} это {my_list[position-1]}')
-elif position==0:
-    print(f'самый близкий по величине элемент к заданному числу {number} это {my_list[position+1]}')
-elif my_list[position]-my_list[position-1]<my_list[position+1]-my_list[position]:
-    print(f'самый близкий по величине элемент к заданному числу {number} это {my_list[position-1]}')
-elif my_list[position]-my_list[position-1]>my_list[position+1]-my_list[position]:
-    print(f'самый близкий по величине элемент к заданному числу {number} это {my_list[position+1]}')
-elif my_list[position]-my_list[position-1]==my_list[position+1]-my_list[position]:
-    print(f'самый близкий по величине элемент к заданному числу {number} это {my_list[position-1], my_list[position+1]}')
-
-
+if position == len(my_list) - 1:
+    print(f'самый близкий по величине элемент к заданному числу {number} это {my_list[position - 1]}')
+elif position == 0:
+    print(f'самый близкий по величине элемент к заданному числу {number} это {my_list[position + 1]}')
+elif my_list[position] - my_list[position - 1] < my_list[position + 1] - my_list[position]:
+    print(f'самый близкий по величине элемент к заданному числу {number} это {my_list[position - 1]}')
+elif my_list[position] - my_list[position - 1] > my_list[position + 1] - my_list[position]:
+    print(f'самый близкий по величине элемент к заданному числу {number} это {my_list[position + 1]}')
+elif my_list[position] - my_list[position - 1] == my_list[position + 1] - my_list[position]:
+    print(
+        f'самый близкий по величине элемент к заданному числу {number} это {my_list[position - 1], my_list[position + 1]}')

@@ -15,7 +15,7 @@ my_list = []
 quantity = int(input('Введите колличество элементов в списке: '))
 number = int(input('Введите число для поиска и расчета повторений в списке: '))
 for _ in range(quantity):
-    my_list.append(random.randint(0,10))
+    my_list.append(random.randint(0, 10))
 count_1 = my_list.count(number)
 print(my_list)
 print(f'Число {number} встречаеться в списке {count_1} раз(а)')

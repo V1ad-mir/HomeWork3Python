@@ -22,19 +22,16 @@
 # ноутбук
 #     12
 
-mark = {'AEIOULNSTRАВЕИНОРСТ':1,'DGДКЛМПУ           ':2,'BCMPБГЁЬЯ          ':3,'FHVWYЙЫ            ':4,
-         'KЖЗХЦЧ             ':5,'JXШЭЮ              ':8,'QZФЩЪ              ':10}
-# print(bal_1.get('A'))
-summ=0
-i=0
-j=0
+mark = {'AEIOULNSTRАВЕИНОРСТ': 1, 'DGДКЛМПУ           ': 2, 'BCMPБГЁЬЯ          ': 3, 'FHVWYЙЫ            ': 4,
+        'KЖЗХЦЧ             ': 5, 'JXШЭЮ              ': 8, 'QZФЩЪ              ': 10}
+summ = 0
 word = input('Введите слово: ').upper().replace(' ', '')
-key_=list(dict.keys(mark))
+key_ = list(dict.keys(mark))
 for i in range(len(word)):
     for j in range(len(key_)):
         if (word[i]) in key_[j]:
-            print(key_[j],end='  ')
-            print(word[i],end=' = ')
+            print(key_[j], end='  ')
+            print(word[i], end=' = ')
             print(mark.get(key_[j]))
-            summ=summ+int(mark.get(key_[j]))
+            summ = summ + int(mark.get(key_[j]))
 print(f'Cтоимость введенного пользователем слова {summ} очков')
