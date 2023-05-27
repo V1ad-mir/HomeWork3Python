@@ -16,7 +16,7 @@ my_list = []
 quantity = int(input('Введите колличество элементов в списке: '))
 number = int(input('Введите число для поиска близких по величине элементов к числу: '))
 for _ in range(quantity):
-    my_list.append(random.randint(0, 10))
+    my_list.append(random.randint(-10, 10))
 print(my_list)
 my_list.append(number)
 my_list = sorted(my_list)
